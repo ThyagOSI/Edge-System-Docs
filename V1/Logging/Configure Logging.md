@@ -46,7 +46,7 @@ To change the logging configuration you can save the JSON containing the informa
 curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging
 ```
 
-where <<ComponentId>> is the ComponentId of the adapter or Storage.
+where \<ComponentId> is the ComponentId of the adapter or Storage.
 
 After the REST command completes, the logging configuration change is auto detected and takes effect during runtime.
 
