@@ -29,8 +29,6 @@ It is located in:
 
 • Linux: */opt/EdgeSystem/Schema*
 
-### **Note:** 
-
 The individual components of Edge System have their own logging files, for example:
 
 • Modbus TCP connectivity: Modbus1_Logging.json
@@ -50,4 +48,5 @@ where \<ComponentId> is the ComponentId of the adapter or Storage.
 
 After the REST command completes, the logging configuration change is auto detected and takes effect during runtime.
 
-If you do not specify all Schema parameter(s) while changing the configuration, it will result in the specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
+### **Note:** 
+If you do not specify *all* the Schema parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
