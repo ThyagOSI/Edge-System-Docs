@@ -43,10 +43,10 @@ The individual components of Edge System have their own logging files, for examp
 To change the logging configuration you can save the JSON containing the information in the JSON format a file named Component_Logging.json and run the following script:
 
 ```bash
-curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ConnectivityId>/Logging
+curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging
 ```
 
-where connectivity id is the Id of the component.
+where <ComponentId> is the ComponentId of the adapter or Storage.
 
 After the REST command completes, the logging configuration change is auto detected and takes effect during runtime.
 
