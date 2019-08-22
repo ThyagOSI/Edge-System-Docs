@@ -29,20 +29,25 @@ It is located in:
 
 • Linux: */opt/EdgeSystem/Schema*
 
-**Note:** 
+### **Note:** 
 
 The individual components of Edge System have their own logging files, for example:
+
 • Modbus TCP connectivity: Modbus1_Logging.json
 
 • OPC UA connectivity: OpcUa1_Logging.json
 
 • Edge Data Store (EDS): Storage_Logging.json
 
-### Changing logging configuration
+## Changing logging configuration
 To change the logging configuration you can save the JSON containing the information in the JSON format a file named Component_Logging.json and run the following script:
 
 ```bash
-curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/ConnectivityId/Logging
+curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ConnectivityId>/Logging
 ```
 
+where connectivity id is the Id of the component.
+
 After the REST command completes, the logging configuration change is auto detected and takes effect during runtime.
+
+If you do not specify all Schema parameter(s) while changing the configuration, it will result in the specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
