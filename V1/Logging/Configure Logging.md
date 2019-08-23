@@ -56,7 +56,7 @@ curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT 
 
 where \<ComponentId> is the ComponentId of the adapter or Storage.
 
-After the REST command completes, the logging configuration change is auto detected and takes effect during runtime.
+After the REST call completes, the logging configuration change takes effect during runtime.
 
 ### **Note:** 
-If you do not specify *all* the Schema parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
+If you do not specify *all* the parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
