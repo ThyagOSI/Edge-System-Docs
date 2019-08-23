@@ -5,13 +5,17 @@ uid: loggingConfiguration
 # Message logging configuration
 Edge System writes daily log messages to flat text files in the following locations:
 
-• Windows: *%ProgramData%/OSIsoft/EdgeSystem/Configuration*
+• Windows: *%ProgramData%/OSIsoft/EdgeSystem/Logs*
 
-• Linux: */usr/share/OSIsoft/EdgeSystem/Configuration*
+• Linux: */usr/share/OSIsoft/EdgeSystem/Logs*
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-The individual components of Edge System have their own logging files, for example:
+The individual components of Edge System have their own logging files located in the configuration folder, for example:
+
+• Windows: *%ProgramData%/OSIsoft/EdgeSystem/Configuration*
+
+• Linux: */usr/share/OSIsoft/EdgeSystem/Configuration*
 
 • Modbus TCP connectivity: Modbus1_Logging.json
 
