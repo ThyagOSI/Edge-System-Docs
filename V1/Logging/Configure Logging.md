@@ -42,7 +42,7 @@ Changing the logLevel leads to captures of logs in severity including and above 
 The logFileCountLimit controls the number of days the log files are persisted before they are deleted for creation of new log files. 
 
 ## Changing logging configuration
-To change the logging configuration you can save the new configuration information in a JSON format a file  and run the following script or make an equivalent REST API call:
+To change the logging configuration you can save the new configuration information in a JSON file format and run the following script (or make an equivalent REST API call)
 
 E.g. Component_Logging.json
 ```json
@@ -60,7 +60,7 @@ curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT 
 
 where \<ComponentId> is the ComponentId of the adapter or Storage.
 
-After the REST call completes, the logging configuration change takes effect during runtime.
+On successful execution, the logging configuration change takes effect immediately during runtime.
 
 ### **Note:** 
 If you do not specify *all* the parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
