@@ -40,9 +40,7 @@ It is located in:
 ### Log Levels
 Changing the logLevel leads to captures of logs in severity including and above the specified log level. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
 
-### Log Level
-
-The table descibes general guidelines on setting the log level.
+The table descibes general guidelines for setting the log level.
 
 | **Level**                | **Description**|      
 |--------------------------|-----------|
