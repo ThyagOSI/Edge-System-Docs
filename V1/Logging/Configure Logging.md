@@ -11,6 +11,14 @@ Edge System writes daily log messages to flat text files in the following locati
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
+The individual components of Edge System have their own logging files, for example:
+
+• Modbus TCP connectivity: Modbus1_Logging.json
+
+• OPC UA connectivity: OpcUa1_Logging.json
+
+• Edge Data Store (EDS): Storage_Logging.json
+
 ## Default logging configuration and Schema
 By default, logging captures Information, Warning and Error and Critical messages in the message logs.
 The default logging configuration for a component on install is 
@@ -28,14 +36,6 @@ It is located in:
 • Windows: *%ProgramFiles%/OSIsoft/EdgeSystem/Schema*
 
 • Linux: */opt/EdgeSystem/Schema*
-
-The individual components of Edge System have their own logging files, for example:
-
-• Modbus TCP connectivity: Modbus1_Logging.json
-
-• OPC UA connectivity: OpcUa1_Logging.json
-
-• Edge Data Store (EDS): Storage_Logging.json
 
 ## Changing logging configuration
 To change the logging configuration you can save the new configuration information in a JSON format a file  and run the following script or make an equivalent REST API call:
