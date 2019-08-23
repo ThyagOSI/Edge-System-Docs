@@ -13,8 +13,6 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 The individual components of Edge System have their own logging files located in the Configuration folder (in the same file system level as the Logs folder). For example:
 
-• Linux: */usr/share/OSIsoft/EdgeSystem/Configuration*
-
 • Modbus TCP connectivity: Modbus1_Logging.json
 
 • OPC UA connectivity: OpcUa1_Logging.json
