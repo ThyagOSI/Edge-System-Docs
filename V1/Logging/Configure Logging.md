@@ -37,6 +37,10 @@ It is located in:
 
 • Linux: */opt/EdgeSystem/Schema*
 
+Changing the logLevel value leads to captures of logs in severity in including and above the specified log level. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
+
+The logFileCountLimit controls the number of days the log files are persisted before they are deleted for creation of new log files. 
+
 ## Changing logging configuration
 To change the logging configuration you can save the new configuration information in a JSON format a file  and run the following script or make an equivalent REST API call:
 
