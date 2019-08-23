@@ -38,7 +38,17 @@ The individual components of Edge System have their own logging files, for examp
 • Edge Data Store (EDS): Storage_Logging.json
 
 ## Changing logging configuration
-To change the logging configuration you can save the new configuration information in a JSON format a file (E.g. Component_Logging.json) and run the following script or make an equivalent REST API call:
+To change the logging configuration you can save the new configuration information in a JSON format a file  and run the following script or make an equivalent REST API call:
+
+E.g. Component_Logging.json
+```json
+{
+  "logLevel": "Warning",
+  "logFileSizeLimitBytes": 16777216,
+  "logFileCountLimit": 30   
+}
+```
+
 
 ```bash
 curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging
