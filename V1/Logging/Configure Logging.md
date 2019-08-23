@@ -11,9 +11,7 @@ Edge System writes daily log messages to flat text files in the following locati
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-The individual components of Edge System have their own logging files located in the configuration folder, for example:
-
-• Windows: *%ProgramData%/OSIsoft/EdgeSystem/Configuration*
+The individual components of Edge System have their own logging files located in the Configuration folder (in the same file system level as the Logs folder). For example:
 
 • Linux: */usr/share/OSIsoft/EdgeSystem/Configuration*
 
