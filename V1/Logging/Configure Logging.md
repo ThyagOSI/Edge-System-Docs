@@ -3,21 +3,21 @@ uid: loggingConfiguration
 ---
 
 # Message logging configuration
-Edge System writes daily log messages to flat text files in the following locations:
+Edge Data Store writes daily log messages to flat text files in the following locations:
 
-• Windows: *%ProgramData%/OSIsoft/EdgeSystem/Logs*
+• Windows: *%ProgramData%/OSIsoft/EdgeDataStore/Logs*
 
-• Linux: */usr/share/OSIsoft/EdgeSystem/Logs*
+• Linux: */usr/share/OSIsoft/EdgeDataStore/Logs*
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-The individual components of Edge System have their own logging files located in the Configuration folder (in the same file system level as the Logs folder). For example:
+The individual components of Edge Data Store have their own logging files located in the Configuration folder (in the same file system level as the Logs folder). For example:
 
 • Modbus TCP connectivity: Modbus1_Logging.json
 
 • OPC UA connectivity: OpcUa1_Logging.json
 
-• Edge Data Store (EDS): Storage_Logging.json
+• Storage (EDS): Storage_Logging.json
 
 ## Default logging configuration and Schema
 By default, logging captures Information, Warning and Error and Critical messages in the message logs.
@@ -33,9 +33,9 @@ The default logging configuration for a component on install is
 The schema file specifies how to formally describe the configuration parameters for message logging. 
 It is located in:
 
-• Windows: *%ProgramFiles%/OSIsoft/EdgeSystem/Schema*
+• Windows: *%ProgramFiles%/OSIsoft/EdgeDataStore/Schema*
 
-• Linux: */opt/EdgeSystem/Schema*
+• Linux: */opt/EdgeDataStore/Schema*
 
 ### Log Levels
 Changing the logLevel leads to captures of logs in severity including and above the specified log level. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
@@ -44,8 +44,8 @@ The table descibes general guidelines for setting the log level.
 
 | **Level**                | **Description**|      
 |--------------------------|-----------|
-|Trace         | Logs that contain the most detailed messages. *These messages may contain sensitive application data* - like actual received values.Generally, these messages *shouldn’t be enabled in production environment*. |
-| Debug | These Log messages are for debugging purposes and are aimed at the developer persona. This could be used to troubleshoot data flow issues by logging metrics and detailed flow related information. |
+|Trace         | Logs that contain the most detailed messages. *These messages may contain sensitive application data* - like actual received values. Generally, these messages *shouldn’t be enabled in production environment*. |
+| Debug | Log messages are for debugging purposes and are aimed at the developer persona. This could be used to troubleshoot data flow issues by logging metrics and detailed flow related information. |
 | Information | Logs that track the general flow of the application. This could be used to any non-repetitive general information would be useful for diagnosing potential application error like version information relating to the software at startup, what external services are being used – data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping” or configuration. |
 | Warning | Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop. This could be used to react on unconfigured data source state, message that communication with backup failover instance has been lost, use of insecure communication channel, or any other event that could require attention, but isn’t directly impacting the flow. |
 | Error | Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This could be used to react on invalid configuration, unavailable external endpoint, internal flow error, etc.|
@@ -73,7 +73,7 @@ curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT 
 
 where \<ComponentId> is the ComponentId of the adapter or Storage.
 
-On successful execution, the logging configuration change takes effect immediately during runtime.
+On successful execution, the log level change takes effect immediately during runtime. The other configurations are updated after Edge Data Store is restarted. 
 
 ### **Note:** 
 If you do not specify *all* the parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
