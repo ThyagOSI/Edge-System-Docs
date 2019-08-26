@@ -11,14 +11,6 @@ Edge Data Store writes daily log messages to flat text files in the following lo
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-The individual components of Edge Data Store have their own logging files located in the Configuration folder (in the same file system level as the Logs folder). For example:
-
-• Modbus TCP connectivity: Modbus1_Logging.json
-
-• OPC UA connectivity: OpcUa1_Logging.json
-
-• Storage (EDS): Storage_Logging.json
-
 ## Default logging configuration and Schema
 By default, logging captures Information, Warning and Error and Critical messages in the message logs.
 The default logging configuration for a component on install is 
@@ -73,7 +65,7 @@ curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT 
 
 where \<ComponentId> is the ComponentId of the adapter or Storage.
 
-On successful execution, the log level change takes effect immediately during runtime. The other configurations are updated after Edge Data Store is restarted. 
+On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. 
 
 ### **Note:** 
 If you do not specify *all* the parameters while changing the configuration, it will result in specified parameter(s) getting updated while the unspecified parameter(s) reverting to the default schema values. 
