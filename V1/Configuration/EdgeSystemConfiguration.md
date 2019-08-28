@@ -69,7 +69,7 @@ After the curl command completes successfully, for Beta 2 the Edge Data Store wi
 The following JSON file represents minimal configuration of an Edge Data Store. There are no Modbus or Opc Ua components, and the Storage component configurations are set to the default. If a system were configured with this JSON file, any existing Modbus or Opc Ua components would be disabled and removed. No storage data would be deleted or modified, and OMF and SDS data access would not be impacted.
 
 ```json
-{{
+{
   "Storage": {
     "PeriodicEgressEndpoints": [],
     "Runtime": {
