@@ -23,13 +23,13 @@ Complete the following to configure the Modbus data source:
 1. Using any text editor, create a file that contains a Modbus data source in JSON form. This file can be created or copied to any directory on a device with Edge Data Store installed.
     - See Modbus Data Source Example section below for content structure
     - See Parameters for Modbus Data Source section below for a table of all available parameters
-2. Save the file as DataSource.config.json.
+2. Save the file as DataSource_Config.json.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`. In Beta 2 the default Modbus adapter has the connectivityId of Modbus1, which is used in the example below.
 
 - Example using cURL (run this command from the same directory where the file is located):
 
   ```bash
-  curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
+  curl -v -d "@DataSource_Config.json" -H "Content-Type: application/json" -X POST http://localhost:5590/api/v1/configuration/Modbus1/DataSource
   ```
 
 ### Parameters for Modbus data source
