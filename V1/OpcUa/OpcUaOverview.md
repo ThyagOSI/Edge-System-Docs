@@ -91,7 +91,6 @@ curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X P
 
 ### Parameters for OPC UA Data Selection
 
-Configuration parameters for OPC UA data selection
 | Parameter     | Required | Type | Description |
 |---------------|----------|------|-------------|
 | **Selected** | Optional | bool | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
